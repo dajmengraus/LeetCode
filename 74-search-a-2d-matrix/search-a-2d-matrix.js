@@ -5,7 +5,7 @@
  */
 var searchMatrix = function(matrix, target) {
     let [rows, cols] = [matrix.length, matrix[0].length];
-    let [top, bot] = [0, rows-1];
+    let [top, bot] = [0, rows - 1];
     
     while(top <= bot){
         let row = Math.floor((top +  bot) / 2);
