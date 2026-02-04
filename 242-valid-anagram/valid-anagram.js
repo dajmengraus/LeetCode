@@ -15,11 +15,10 @@ var isAnagram = function(s, t) {
     }
 
     for (let char of t) {
-        if (!count.has(char) || count.get(char) === 0) {
+        if (!count.get(char)) {
             return false;
-        } else {
-            count.set(char, count.get(char) - 1);
         }
+        count.set(char, count.get(char) - 1);
     }
 
     return true;
