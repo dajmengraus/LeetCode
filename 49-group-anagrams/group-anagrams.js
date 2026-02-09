@@ -5,11 +5,11 @@
 var groupAnagrams = function(strs) {
     let map = new Map();
     for (let s of strs) {
-        let sort = s.split('').sort().join('');
-        if (!map.has(sort)) {
-            map.set(sort, []);
+        let sorted = s.split("").sort().join("");
+        if (!map.has(sorted)) {
+            map.set(sorted, []);
         }
-        map.get(sort).push(s);
+        map.get(sorted).push(s);
     }
     return Array.from(map.values());
 };
